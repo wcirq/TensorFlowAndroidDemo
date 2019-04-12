@@ -75,7 +75,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  用来跑道路识别
+ * 人体骨骼
  */
 public class Camera2BasicFragment3 extends Fragment
         implements FragmentCompat.OnRequestPermissionsResultCallback {
@@ -100,7 +100,6 @@ public class Camera2BasicFragment3 extends Fragment
     private Classifier classifier2;
 
 
-
     private static float canvasWidth = 100;
     private static float canvasHeight = 100;
     /**
@@ -114,11 +113,10 @@ public class Camera2BasicFragment3 extends Fragment
     private static final int MAX_PREVIEW_HEIGHT = 1080;
 
 
-
     //ADAS参数
     private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.6f;
     private static final String MODEL_FILE = "file:///android_asset/graph_opt.pb";
-//    private static final String MODEL_FILE = "file:///android_asset/fcn_310_2.h5.pb";
+    //    private static final String MODEL_FILE = "file:///android_asset/fcn_310_2.h5.pb";
     private static final String LABEL_FILE =
             "file:///android_asset/coco_labels_list.txt";
     private static final int TF_OD_API_INPUT_SIZE = 368;
@@ -466,7 +464,7 @@ public class Camera2BasicFragment3 extends Fragment
                 // coordinate.
                 int displayRotation = activity.getWindowManager().getDefaultDisplay().getRotation();
                 // noinspection ConstantConditions
-        /* Orientation of the camera sensor */
+                /* Orientation of the camera sensor */
                 int sensorOrientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
                 boolean swappedDimensions = false;
                 switch (displayRotation) {

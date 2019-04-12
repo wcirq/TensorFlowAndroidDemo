@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 静态加载Fragment -->
+    <fragment
+        android:id="@+id/left_fragment"
+        android:name="com.tfcamerademo.LeftFragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        　　　　 <!-- 可以在这个容器中动态加载Fragment -->
+        <fragment
+            android:id="@+id/right_fragment"
+            android:name="com.tfcamerademo.RightFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</LinearLayout>

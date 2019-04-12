@@ -24,6 +24,7 @@ import com.tfcamerademo.Camera2BasicFragment2;
 import com.tfcamerademo.Camera2BasicFragment3;
 import com.tfcamerademo.Camera2BasicFragment4;
 import com.tfcamerademo.R;
+import com.tfcamerademo.TestFragment;
 
 /**
  * Main {@code Activity} class for the Camera app.
@@ -50,6 +51,8 @@ public class CameraActivity extends Activity {
                 case 4:
                     fragment = Camera2BasicFragment4.newInstance();
                     break;
+                case 5:
+                    fragment = TestFragment.newInstance();
             }
             getFragmentManager()
                     .beginTransaction()

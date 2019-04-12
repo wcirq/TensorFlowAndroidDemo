@@ -3,9 +3,11 @@ package com.tfcamerademo.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.tfcamerademo.R;
+
 
 public class MainActivity extends Activity {
 
@@ -39,6 +41,10 @@ public class MainActivity extends Activity {
                 break;
             case R.id.carAndLineBtn:
                 intent.putExtra("Flag", 4);
+                MainActivity.this.startActivity(intent);
+                break;
+            case R.id.myTest:
+                intent.putExtra("Flag", 5);
                 MainActivity.this.startActivity(intent);
                 break;
         }

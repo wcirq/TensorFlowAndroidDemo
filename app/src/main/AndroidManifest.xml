@@ -16,8 +16,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tfcamerademo">
 
-    <uses-sdk android:minSdkVersion="21" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -29,13 +27,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/tile"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/MaterialTheme">
+        <activity android:name=".activity.ImageManipulationsActivity"
+            android:label="MyTest"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation">
+        </activity>
         <activity
             android:name=".activity.CameraActivity"
             android:label="@string/app_name">
-
         </activity>
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -45,5 +47,14 @@
             </intent-filter>
         </activity>
     </application>
+    <supports-screens android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
 
 </manifest>
